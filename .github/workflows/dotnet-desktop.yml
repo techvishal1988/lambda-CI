@@ -29,7 +29,7 @@ jobs:
         uses: danielr1996/envsubst-action@1.1.0
         env:
           DEPLOY_S3_BUCKET: lamda-bucket123
-          AWS_REGION: ${{ secrets.AWS_REGION }}
+          AWS_REGION: ap-south-1
         with:
           input: ServiceStackLambda/aws-lambda-tools-defaults.json
           output: ServiceStackLambda/aws-lambda-tools-defaults.json
@@ -40,7 +40,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ secrets.AWS_REGION }}
+          aws-region: ap-south-1
           
       - name: deploy serverless
         run: dotnet lambda deploy-serverless --template serverless.template
