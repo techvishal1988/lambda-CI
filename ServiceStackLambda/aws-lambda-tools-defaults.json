@@ -6,7 +6,7 @@
     "All the command line options for the Lambda command can be specified in this file."
   ],
   "profile"     : "default",
-  "region"      : "${AWS_REGION}",
+  "region"      : "ap-south-1",
   "package-type" : "image",
   "function-name": "ServiceStackLambda",
   "stack-name"   : "ServiceStackLambda",
