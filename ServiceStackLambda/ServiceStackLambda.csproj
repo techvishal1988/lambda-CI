@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Using Include="ServiceStackLambda" />
+    <Using Include="ServiceStack" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Amazon.Lambda.AspNetCoreServer" Version="7.0.1" />
+    <PackageReference Include="ServiceStack" Version="6.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceStackLambda.ServiceInterface\ServiceStackLambda.ServiceInterface.csproj" />
+    <ProjectReference Include="..\ServiceStackLambda.ServiceModel\ServiceStackLambda.ServiceModel.csproj" />
+  </ItemGroup>
+
+</Project>
