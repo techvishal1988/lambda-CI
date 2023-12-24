@@ -28,7 +28,7 @@ jobs:
       - name: Create serverless file from template
         uses: danielr1996/envsubst-action@1.1.0
         env:
-          DEPLOY_S3_BUCKET: ${{ secrets.DEPLOY_S3_BUCKET }}
+          DEPLOY_S3_BUCKET: lamda-bucket123
           AWS_REGION: ${{ secrets.AWS_REGION }}
         with:
           input: ServiceStackLambda/aws-lambda-tools-defaults.json
